@@ -1,0 +1,30 @@
+<head>
+    <%- include('head'); -%>
+
+<body>
+    <%- include('navigation'); -%>
+        <h1 style="color: white; border: 1px solid white; text-align: center;">Login</h1>
+        <div class="containor">
+            <div class="loginpage">
+
+                <form method="get" action="/validateMember">
+                    <p>
+                        <label style="color: white;">Email:</label>
+                        <input type="email" name="email">
+                    </p>
+                    <p>
+                        <label style="color: white;">Password:</label>
+                        <input type="text" name="password">
+                    </p>
+                    <h2 style="color: white;">
+                        <%= message %>
+                    </h2>
+                    <p>
+                        <input type="submit" value="Login">
+                    </p>
+                </form>
+            </div>
+        </div>
+
+</body>
+</head>

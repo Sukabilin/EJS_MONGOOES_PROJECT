@@ -1,0 +1,43 @@
+<head>
+    <%- include('head'); -%>
+
+<body>
+    <%- include('navigation'); -%>
+
+        <h1 style="color: white; border: 1px solid white; text-align: center;">MY POSTS</h1>
+        <div class="containor">
+
+            <div class="loginpage">
+
+                <div>
+                    <% if(post.length==0){ %>
+                        <h1 style="color: white;">No post Found</h1>
+                        <% } else{ %>
+                            <% for (var i=0; i < post.length; i++) { %>
+                                <div style=" margin-bottom: 15px;">
+                                    <a style="font-size: 1.3rem; font-weight: 700; color: white"
+                                        href="getsinglePost/<%= post[i]._id %>">
+                                        <%= post[i].title %>
+                                    </a>
+                                    <form method="get" action="/delete/<%= post[i]._id %>">
+
+                                        <span><input type="submit" value="Delete Post"><span>
+                                    </form>
+                                </div>
+                                <% } %>
+                                    <% } %>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div style="justify-content: center;margin-top: 10px;; align-items: center;display: flex;">
+
+            <form action="/removeAllPost" method="get">
+                <span><input type="submit" value="Delete All Post"><span>
+            </form>
+        </div>
+
+</body>
+</head>

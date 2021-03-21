@@ -1,0 +1,39 @@
+<head>
+    <%- include('head'); -%>
+
+<body>
+    <%- include('navigation'); -%>
+
+        <h1 style="color: white; border: 1px solid white; text-align: center;">Add Post</h1>
+
+        <div class="containor">
+            <div class="loginpage">
+                <form method="get" action="/addPost">
+                    <p>
+                        <label style="color: white;">Title:</label>
+                        <input type="text" name="title">
+                    </p>
+                    <p>
+                        <label style="color: white;">Detail:</label>
+                        <textarea style="border: 1px solid white;" id="txtArea" name="detial" rows="4" cols="50">
+                            </textarea>
+                    </p>
+
+                    <p>
+                        <label style="color: white;">Private/Public</label><br>
+                        <input type="radio" id="private" name="status" value="private">
+                        <label style="color: white;" for="Private">Private</label><br>
+                        <input type="radio" id="public" name="status" value="public">
+                        <label style="color: white;" for="Public">Public</label><br>
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Add New Post">
+                    </p>
+                </form>
+            </div>
+        </div>
+
+
+</body>
+</head>

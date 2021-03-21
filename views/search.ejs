@@ -1,0 +1,46 @@
+<head>
+    <%- include('head'); -%>
+
+<body>
+    <%- include('navigation'); -%>
+
+        <h1 style="color: white; border: 1px solid white; text-align: center;">Search Page</h1>
+
+        <div class="containor">
+            <div class="loginpage">
+                <form action="/searchByEmail" method="get" name="regForm">
+
+                    <p>
+                        <label style="color: white;">Search</label>
+                        <input type="email" name="email" id="email" /> <input type="submit" value="Submit">
+                    </p>
+                    <h1 style="color: white;">
+                        <%= message %>
+                    </h1>
+                    <div>
+                        <% if(post.length==0){ %>
+                            <h1 style="color: white;">No post Found</h1>
+                            <% } else{ %>
+                                <h2 style="color: white;">Post </h2>
+                                <% for (var i=0; i < post.length; i++) { %>
+                                    <div style=" margin-bottom: 15px;">
+                                        <span style="color: white;">
+                                            <%= i+1 %> :
+                                        </span> <a style="font-size: 1.3rem; font-weight: 700;"
+                                            href="postComment/<%= post[i]._id %>">
+                                            <%= post[i].title %>
+                                        </a>
+                                    </div>
+                                    <% } %>
+                                        <% } %>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+
+</body>
+</head>

@@ -1,0 +1,56 @@
+<head>
+    <%- include('head'); -%>
+
+<body>
+    <%- include('navigation'); -%>
+
+        <div class="containor">
+            <div class="loginpage">
+                <h1 style="color: white;">
+                    <span style="color: white; ">Title : </span>
+                    <%= post.title %>
+                </h1>
+
+            </div>
+        </div>
+
+        <p style="color: white;">
+            <span style="color: white; font-size: 2rem;">Detail : </span>
+
+            <%= post.detial %>
+        </p>
+        <div>
+            <h2 style="color: white;">Post Comments</h2>
+
+            <div>
+                <% if(comment.length==0){ %>
+                    <h1 style="color: white;"></h1>
+                    <% } else{ %>
+                        <% for (var i=0; i < comment.length; i++) { %>
+                            <h2 style="color: white;">
+                                <%= comment[i].name %>
+                            </h2>
+                            <p style="color: white;">
+                                <%= comment[i].comment %>
+                            </p>
+                            <% } %>
+                                <% } %>
+
+            </div>
+        </div>
+        <!-- add input field and buttom to submit comment -->
+        <div>
+            <h1 style="color: white;">Add Comment</h1>
+        </div>
+        <form method="get" action="/addComment">
+            <p>
+                <textarea id="txtArea" name="detial" rows="4" cols="50"></textarea>
+            </p>
+
+            <p>
+                <input type="submit" value="Add Comment">
+            </p>
+        </form>
+
+</body>
+</head>

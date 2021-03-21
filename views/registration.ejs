@@ -1,0 +1,57 @@
+<head>
+    <%- include('head'); -%>
+
+<body>
+    <%- include('navigation'); -%>
+
+        <h1 style="color: white; border: 1px solid white; text-align: center;">Registration Form</h1>
+        <div class="containor">
+            <div class="loginpage">
+                <form action="/addMember" method="get" name="regForm">
+                    <p>
+                        <label style="color: white; margin-right: 20px;">First Name:</label>
+                        <input type="text" name="firstName" id="firstName" />
+                    </p>
+                    <p>
+                        <label style="color: white; margin-right: 20px;">Last name:</label>
+                        <input type="text" name="lastName" id="lastName" />
+
+                    </p>
+                    <p>
+                        <label style="color: white; margin-right: 50px;">Email:</label>
+                        <input type="text" name="email" id="emails" />
+                    </p>
+
+                    <p>
+                        <label style="color: white; margin-right: 20px;">Password:</label>
+                        <input type="text" name="password" id="password" />
+                    </p>
+
+                    <p>
+                        <label style="color: white; margin-right: 20px;">Nick name:</label>
+                        <input type="text" name="nickName" id="nickName" />
+                    </p>
+                    <p>
+                        <label style="color: white; margin-right: 68px;">Day:</label>
+                        <input type="number" name="day" id="day" />
+
+                    </p>
+                    <p>
+                        <label style="color: white; margin-right: 50px;">Month:</label>
+                        <input type="number" name="month" id="month" />
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Submit">
+                    </p>
+
+
+                </form>
+            </div>
+        </div>
+
+        <script>
+
+        </script>
+</body>
+</head>
